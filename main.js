@@ -6,12 +6,12 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 
 for (let indice = 0;indice < listaDeTeclas.length;indice++) {
     const tecla = listaDeTeclas[indice];
-    const instrumento = tecla.classList[1];
-    const idAudio = `#som_${instrumento}`;
+    const instrumento = tecla.classList[1]; //seleciona o segundo atributo de tecla através da seleção no classList
+    const idAudio = `#som_${instrumento}`; //preenche constante com parte de string em referencia contultada
 
     tecla.onclick = function () {
         tocaSom(idAudio);
-    }
+    } //atribui função a cada evento .onclick nos elemento da lista de teclas.
 }
 
 /*let contador = 0;
