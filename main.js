@@ -13,8 +13,11 @@ for (let indice = 0;indice < listaDeTeclas.length;indice++) {
         tocaSom(idAudio);
     } //atribui função a cada evento .onclick nos elemento da lista de teclas.
     
-    tecla.onkeydown = function () {
-        tecla.classList.add('ativa');              
+    tecla.onkeydown = function (evento) {
+        
+        if (evento.code == "Enter" || evento.code == "Space") {
+            tecla.classList.add('ativa')
+        }            
     }//adiciona classe através de função add ao apertar tecla
 
     tecla.onkeyup = function () {
